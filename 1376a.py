@@ -1,3 +1,6 @@
+"""
+1376
+"""
 class Solution:
     def dfs(self, manager, informTime, adjList):
         maxTime = 0
