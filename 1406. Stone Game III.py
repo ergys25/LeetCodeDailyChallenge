@@ -1,3 +1,6 @@
+"""
+1406
+"""
 class Solution:
     def stoneGameIII(self, stoneValue):
         n = len(stoneValue)
