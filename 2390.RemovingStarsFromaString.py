@@ -1,4 +1,5 @@
 """
+2390
 You are given a string s, which contains stars *.
 
 In one operation, you can:
