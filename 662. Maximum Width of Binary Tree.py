@@ -1,4 +1,5 @@
 """
+662
 Given the root of a binary tree, return the maximum width of the given tree.
 
 The maximum width of a tree is the maximum width among all levels.
