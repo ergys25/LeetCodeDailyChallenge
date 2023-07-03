@@ -1,3 +1,6 @@
+"""
+1603
+"""
 class ParkingSystem:
     def __init__(self, big: int, medium: int, small: int):
         self.spots = [big, medium, small]
