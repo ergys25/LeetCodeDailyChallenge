@@ -1,3 +1,6 @@
+"""
+1376
+"""
 class Solution:
     def numOfMinutes(self, n: int, headID: int, a: List[int], b: List[int]) -> int:
         mp=defaultdict(list)
