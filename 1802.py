@@ -1,3 +1,6 @@
+"""
+1802
+"""
 class Solution:
     def check(self, a):
         left_offset = max(a - self.index, 0)
