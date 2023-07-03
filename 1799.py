@@ -1,3 +1,6 @@
+"""
+1799
+"""
 class Solution:
     def maxScore(self, nums: List[int]) -> int:
         n = len(nums)
