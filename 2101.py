@@ -1,3 +1,7 @@
+"""
+2101
+"""
+
 class Solution:
     def maximumDetonation(self, bombs):
         n, max_bombs, graph = len(bombs), 0, defaultdict(list)
