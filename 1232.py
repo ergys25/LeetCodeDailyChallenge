@@ -1,3 +1,6 @@
+"""
+1232
+"""
 class Solution:
     def checkStraightLine(self, coordinates):
         x0, y0 = coordinates[0]
