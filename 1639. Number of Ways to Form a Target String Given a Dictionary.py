@@ -1,4 +1,5 @@
 """
+1639
 You are given a list of strings of the same length words and a string target.
 
 Your task is to form target using the given words under the following rules:
