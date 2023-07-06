@@ -1,3 +1,6 @@
+"""
+399
+"""
 class Solution:
     
     def answer(self, current, end, scalar):
