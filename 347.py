@@ -1,3 +1,7 @@
+"""
+347
+"""
+
 class Solution:
     def topKFrequent(self, nums, k):
         counter = Counter(nums)
