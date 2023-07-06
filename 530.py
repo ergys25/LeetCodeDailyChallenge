@@ -1,3 +1,7 @@
+"""
+
+530
+"""
 class Solution:
     def getMinimumDifference(self, root):
         self.min_diff = float('inf')
