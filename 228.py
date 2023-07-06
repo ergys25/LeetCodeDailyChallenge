@@ -1,3 +1,7 @@
+"""
+228
+"""
+
 class Solution:
     def summaryRanges(self, nums):
         if not nums:
