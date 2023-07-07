@@ -1,3 +1,7 @@
+"""
+1547
+"""
+
 class Solution:
     def minCost(self, n, cuts):
         cuts.append(0)
