@@ -1,3 +1,6 @@
+"""
+744
+"""
 class Solution:
     def nextGreatestLetter(self, letters, target):
         left = 0
