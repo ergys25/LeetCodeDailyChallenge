@@ -1,5 +1,5 @@
 """
-spiral matrix
+spiral matrix.py
 """
 
 class Solution:
