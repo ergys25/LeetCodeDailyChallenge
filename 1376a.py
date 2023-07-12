@@ -1,5 +1,5 @@
 """
-1376
+1376.py
 """
 class Solution:
     def dfs(self, manager, informTime, adjList):
