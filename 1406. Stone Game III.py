@@ -1,5 +1,5 @@
 """
-1406
+1406.py
 """
 class Solution:
     def stoneGameIII(self, stoneValue):
