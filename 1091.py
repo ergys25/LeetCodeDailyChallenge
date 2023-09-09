@@ -4,7 +4,7 @@
 
 class Solution:
     def shortestPathBinaryMatrix(self, grid):
-        n = len(grid)
+        n =  len(grid)
         if grid[0][0] or grid[n - 1][n - 1]:
             return -1
 
