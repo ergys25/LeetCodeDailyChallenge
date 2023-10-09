@@ -15,7 +15,7 @@ class Solution:
             max_product_for_num = 0
             for sub_num in range(1, num // 2 + 1):
                 max_product_for_num = max(max_product_for_num, max_product[sub_num] * max_product[num - sub_num])
-            max_product[num] = max_product_for_num
+            max_product[ num ] = max_product_for_num
 
         return max_product[n]
 
