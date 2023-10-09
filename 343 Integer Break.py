@@ -17,7 +17,7 @@ class Solution:
                 max_product_for_num = max(max_product_for_num, max_product[sub_num] * max_product[num - sub_num])
             max_product[ num ] = max_product_for_num
 
-        return max_product[n]
+        return max_product[ n ]
 
 
 # The space complexity of the code is O(n) because we are creating an array of size n+1 to store the maximum product for each number from 1 to n.
