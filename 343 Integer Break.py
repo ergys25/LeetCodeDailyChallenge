@@ -22,5 +22,5 @@ class Solution:
 
 # The  space  complexity of the code is O(n) because  we are creating an array of size n+1 to store the maximum product for each number from 1 to n.
 
-# The  time complexity of the code is O(n^2) because we are using a nested loop to calculate the maximum product for each number from 4 to n. The outer loop runs n-3 times, and the inner loop runs (num // 2) times, which is approximately n/2 times. Therefore, the total number of iterations is approximately (n-3) * (n/2), which is O(n^2).
+# The  time complexity of the code is O(n^2)  because we are using a nested loop to calculate the maximum product for each number from 4 to n. The outer loop runs n-3 times, and the inner loop runs (num // 2) times, which is approximately n/2 times. Therefore, the total number of iterations is approximately (n-3) * (n/2), which is O(n^2).
 
