@@ -13,7 +13,7 @@ class Solution:
                     if a!=-1: return a
         return -1
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
-        self.graph,self.visited={},set()
+        self.graph,self.visited= {},set()
         for i in range(len(equations)):
             if equations[i][0] not in self.graph:
                 self.graph[equations[i][0]]=[]
