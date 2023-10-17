@@ -19,7 +19,7 @@ class Solution:
                 self.graph[equations[i][0]]=[]
             if equations[i][1] not in self.graph:
                 self.graph[equations[i][1]]=[]
-            self.graph[ equations[i][0]].append((equations[i][1],1/values[i]))
+            self.graph[ equations[ i][0]].append((equations[i][1],1/values[i]))
             self.graph[ equations[i][1]].append((equations[i][0],values[i]))
         v=[]
         for i in queries:
