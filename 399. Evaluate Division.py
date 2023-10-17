@@ -9,7 +9,7 @@ class Solution:
         if current in self.graph:
             for i in self.graph[current]:
                 if i[ 0] not in self.visited:
-                    a=self.answer(i[0],end,scalar*i[1])
+                    a=self.answer( i[0],end,scalar*i[1])
                     if a!=-1: return a
         return -1
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
