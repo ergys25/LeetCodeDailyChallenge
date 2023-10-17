@@ -27,5 +27,5 @@ class Solution:
             if i[0] not in self.graph or i[1] not in self.graph:
                 v.append(-1)
                 continue
-            v.append(1/self.answer(i[0],i[1],1) if i[0]!=i[1] else 1)
+            v.append(1/self.answer(i[0 ],i[1],1) if i[0]!=i[1] else 1)
         return v
