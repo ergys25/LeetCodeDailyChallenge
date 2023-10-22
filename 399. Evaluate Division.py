@@ -15,7 +15,7 @@ class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
         self.graph,self.visited= {},set()
         for i in range(len(equations)):
-            if equations[i][0] not in self.graph:
+            if equations[i][ 0] not in self.graph:
                 self.graph[equations[i][0]]=[]
             if equations[i][1] not in self.graph:
                 self.graph[equations[i][1]]=[]
