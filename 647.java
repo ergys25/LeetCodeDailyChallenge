@@ -1,3 +1,12 @@
+
+// Time Complexity: O(n^3)
+// Space Complexity: O(1)
+
+// Approach: Brute Force
+// 1. We can generate all possible substrings and check if they are palindrome or not.
+// 2. If a substring is palindrome, we increment the count.
+
+
 class Solution {
 
     public boolean isPalindrome(String s, int left, int right) {
@@ -17,4 +26,13 @@ class Solution {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String s = "abc";
+        System.out.println(sol.countSubstrings(s));
+    }
+
+
+    
 }
