@@ -19,8 +19,10 @@ class Solution {
             }
         }
         return Math.max(tasks.length, time);
+        
     }
 }
+
 
 // space: O(1)
 // time: O(nlogn)
