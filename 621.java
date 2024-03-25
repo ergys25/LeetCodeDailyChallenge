@@ -19,7 +19,7 @@ class Solution {
             }
         }
         return Math.max(tasks.length, time);
-        
+    
     }
 }
 
