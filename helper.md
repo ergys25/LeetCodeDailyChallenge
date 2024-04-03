@@ -1,159 +1,170 @@
-## User Stories and JIRA Tickets
+# Venue Booking Platform Project Plan
 
-### Epic: User Management
+## Technology Stack
+- **Backend**: Java 17, Spring Boot
+- **Frontend**: Angular
 
-#### User Story US1: User Registration
+## Project Duration
+- **Duration**: 4 months (16 weeks)
 
-- **Task T1.1:** Create registration form UI
-    - JIRA Ticket: `VS-101`
+---
+
+## Backend Development
+
+### Week 1-2: Setup and User Management
+
+#### US1: Setup Spring Boot project with Java 17
+- **Tasks:**
+  - Initialize Spring Boot project with Spring Initializr
+  - Configure build tools (Maven/Gradle), dependencies, and project structure
+- **Acceptance Criteria:**
+  - Project structure created
+  - Dependencies configured
+- **Estimated Time:** 1 week
+
+#### US2: Implement User Registration
+- **Tasks:**
+  - Create User Entity with fields: Id, Email, Password
+  - Implement UserRepository
+  - Create UserService with registerUser() method
+  - Implement registration endpoint (POST /api/users/register)
+- **Acceptance Criteria:**
+  - Users can register with valid email and password
+  - Passwords are securely hashed before storing
+- **Estimated Time:** 1 week
+
+#### US3: Implement User Login and JWT Authentication
+- **Tasks:**
+  - Implement login endpoint (POST /api/users/login)
+  - Generate JWT token upon successful login
+  - Implement JWT authentication filter and security configuration
+- **Acceptance Criteria:**
+  - Users can login with valid credentials
+  - JWT token is generated and used for authentication
+- **Estimated Time:** 1 week
+
+#### US4: Implement User Profile and Password Recovery
+- **Tasks:**
+  - Implement getProfile() and updateProfile() methods in UserService
+  - Create endpoints for getting and updating user profile (GET /api/users/{id}, PUT /api/users/{id})
+  - Implement password recovery functionality with email verification
+- **Acceptance Criteria:**
+  - Users can view and update their profile
+  - Users can recover their password via email
+- **Estimated Time:** 1 week
+
+### Week 3-5: Venue Management
+
+#### US5: Implement Venue CRUD Operations
+- **Tasks:**
+  - Create Venue Entity with fields: Id, Name, Location, Capacity, Amenities, Photos
+  - Implement VenueRepository
+  - Create VenueService with CRUD methods
+  - Implement CRUD endpoints for venues (POST/GET/PUT/DELETE /api/venues)
+- **Acceptance Criteria:**
+  - Venues can be created, read, updated, and deleted
+- **Estimated Time:** 3 weeks
+
+#### US6: Implement Image Upload for Venues
+- **Tasks:**
+  - Implement ImageService for storing and retrieving images
+  - Update Venue Entity and Service to support image upload
+  - Implement endpoint for uploading venue images (POST /api/venues/{id}/images)
+- **Acceptance Criteria:**
+  - Images can be uploaded and associated with venues
+- **Estimated Time:** 1 week
+
+### Week 6-8: Booking Management
+
+#### US7: Implement Booking System
+- **Tasks:**
+  - Create Booking Entity with fields: Id, UserId, VenueId, Date, Time
+  - Implement BookingRepository
+  - Create BookingService with bookVenue() and cancelBooking() methods
+  - Implement endpoints for booking and canceling venues (POST/DELETE /api/bookings)
+- **Acceptance Criteria:**
+  - Users can book and cancel venue bookings
+- **Estimated Time:** 3 weeks
+
+### Week 9-10: Review and Rating
+
+#### US8: Implement Review and Rating System
+- **Tasks:**
+  - Create Review Entity with fields: Id, UserId, VenueId, Rating, Comment
+  - Implement ReviewRepository
+  - Create ReviewService with addReview() and getReviews() methods
+  - Implement endpoints for adding and retrieving venue reviews (POST/GET /api/reviews)
+- **Acceptance Criteria:**
+  - Users can add and view reviews and ratings for venues
+- **Estimated Time:** 2 weeks
+
+### Week 11-13: Admin Dashboard and Testing
+
+#### US9: Implement Admin Dashboard
+- **Tasks:**
+  - Create AdminUserController and AdminVenueController
+  - Implement admin endpoints for managing users and venues
+  - Secure admin endpoints with role-based access control
+- **Acceptance Criteria:**
+  - Admins can manage users and venues via the dashboard
+- **Estimated Time:** 3 weeks
+
+#### US10: Write Unit, Integration, and End-to-End Tests
+- **Tasks:**
+  - Write unit tests for services and repositories
+  - Write integration tests for controllers and services
+  - Write end-to-end tests for complete user flows
+- **Acceptance Criteria:**
+  - Tests pass and provide sufficient coverage for backend functionality
+- **Estimated Time:** 2 weeks
+
+---
+
+## Frontend Development
+
+### Week 14-15: Setup and User Interface Development
+
+#### US11: Setup Angular project
+- **Tasks:**
+  - Initialize Angular project using Angular CLI
+  - Configure build tools, dependencies, and project structure
+- **Acceptance Criteria:**
+  - Angular project structure created
+- **Estimated Time:** 1 week
+
+#### US12: Implement User Interface for User Management
+- **Tasks:**
+  - Create components for user registration, login, profile, and password recovery
+  - Implement forms, input validation, and error handling
+- **Acceptance Criteria:**
+  - Users can register, login, view and update profile, and recover password via the UI
+- **Estimated Time:** 2 weeks
+
+### Week 16: Frontend Testing and Final Review
+
+#### US13: Implement User Interface for Venue Management
+- **Tasks:**
+  - Create components for venue creation, update, delete, and view
+  - Implement forms, input validation, image upload, and error handling
+- **Acceptance Criteria:**
+  - Users can perform CRUD operations on venues and upload images via the UI
+- **Estimated Time:** 2 weeks
+
+#### US14: Write Unit, Integration, and End-to-End Tests for Frontend
+- **Tasks:**
+  - Write unit tests for components and services
+  - Write integration tests for UI components and services
+  - Write end-to-end tests for complete user flows
+- **Acceptance Criteria:**
+  - Tests pass and provide sufficient coverage for frontend functionality
+- **Estimated Time:** 2 weeks
+
+---
+
+## Project Management Tools and Collaboration
+
+- **Version Control**: Use Git with platforms like GitHub, GitLab, or Bitbucket for version control, branching, and code reviews.
   
-- **Task T1.2:** Validate user input on registration form
-    - JIRA Ticket: `VS-102`
+- **Project Tracking**: Use JIRA or Trello for creating, assigning, and tracking tasks, epics, and sprints.
   
-- **Task T1.3:** Implement backend API for user registration
-    - JIRA Ticket: `VS-103`
-  
-- **Task T1.4:** Test user registration functionality
-    - JIRA Ticket: `VS-104`
-
-#### User Story US2: User Login
-
-- **Task T2.1:** Create login form UI
-    - JIRA Ticket: `VS-105`
-  
-- **Task T2.2:** Validate user input on login form
-    - JIRA Ticket: `VS-106`
-  
-- **Task T2.3:** Implement backend API for user login
-    - JIRA Ticket: `VS-107`
-  
-- **Task T2.4:** Test user login functionality
-    - JIRA Ticket: `VS-108`
-
-#### User Story US3: User Profile
-
-- **Task T3.1:** Design user profile page UI
-    - JIRA Ticket: `VS-109`
-  
-- **Task T3.2:** Implement backend API to fetch user profile details
-    - JIRA Ticket: `VS-110`
-  
-- **Task T3.3:** Implement backend API to update user profile details
-    - JIRA Ticket: `VS-111`
-  
-- **Task T3.4:** Test user profile functionality
-    - JIRA Ticket: `VS-112`
-
-#### User Story US4: Password Recovery
-
-- **Task T4.1:** Design password recovery form UI
-    - JIRA Ticket: `VS-113`
-  
-- **Task T4.2:** Validate user input on password recovery form
-    - JIRA Ticket: `VS-114`
-  
-- **Task T4.3:** Implement backend API for password recovery
-    - JIRA Ticket: `VS-115`
-  
-- **Task T4.4:** Test password recovery functionality
-    - JIRA Ticket: `VS-116`
-
-### Epic: Venue Management
-
-#### User Story US5: Create Venue
-
-- **Task T5.1:** Design venue creation form UI
-    - JIRA Ticket: `VS-117`
-  
-- **Task T5.2:** Validate user input on venue creation form
-    - JIRA Ticket: `VS-118`
-  
-- **Task T5.3:** Implement backend API for venue creation
-    - JIRA Ticket: `VS-119`
-  
-- **Task T5.4:** Test venue creation functionality
-    - JIRA Ticket: `VS-120`
-
-#### User Story US6: Update Venue
-
-- **Task T6.1:** Design venue update form UI
-    - JIRA Ticket: `VS-121`
-  
-- **Task T6.2:** Validate user input on venue update form
-    - JIRA Ticket: `VS-122`
-  
-- **Task T6.3:** Implement backend API for venue update
-    - JIRA Ticket: `VS-123`
-  
-- **Task T6.4:** Test venue update functionality
-    - JIRA Ticket: `VS-124`
-
-#### User Story US7: Delete Venue
-
-- **Task T7.1:** Implement backend API for venue deletion
-    - JIRA Ticket: `VS-125`
-  
-- **Task T7.2:** Test venue deletion functionality
-    - JIRA Ticket: `VS-126`
-
-#### User Story US8: View Venue Details
-
-- **Task T8.1:** Design venue details page UI
-    - JIRA Ticket: `VS-127`
-  
-- **Task T8.2:** Implement backend API to fetch venue details
-    - JIRA Ticket: `VS-128`
-  
-- **Task T8.3:** Test venue details functionality
-    - JIRA Ticket: `VS-129`
-
-### Epic: Booking Management
-
-#### User Story US9: Search and Filter Venues
-
-- **Task T9.1:** Design search and filter UI components
-    - JIRA Ticket: `VS-130`
-  
-- **Task T9.2:** Implement backend API for venue search and filtering
-    - JIRA Ticket: `VS-131`
-  
-- **Task T9.3:** Test venue search and filter functionality
-    - JIRA Ticket: `VS-132`
-
-#### User Story US10: View Venue Availability
-
-- **Task T10.1:** Design venue availability calendar UI
-    - JIRA Ticket: `VS-133`
-  
-- **Task T10.2:** Implement backend API to fetch venue availability
-    - JIRA Ticket: `VS-134`
-  
-- **Task T10.3:** Test venue availability functionality
-    - JIRA Ticket: `VS-135`
-
-#### User Story US11: Book Venue
-
-- **Task T11.1:** Design booking form UI
-    - JIRA Ticket: `VS-136`
-  
-- **Task T11.2:** Validate user input on booking form
-    - JIRA Ticket: `VS-137`
-  
-- **Task T11.3:** Implement backend API for venue booking
-    - JIRA Ticket: `VS-138`
-  
-- **Task T11.4:** Test venue booking functionality
-    - JIRA Ticket: `VS-139`
-
-#### User Story US12: Cancel Booking
-
-- **Task T12.1:** Implement backend API for booking cancellation
-    - JIRA Ticket: `VS-140`
-  
-- **Task T12.2:** Test booking cancellation functionality
-    - JIRA Ticket: `VS-141`
-
-### Additional Epics and User Stories:
-
-(Include additional epics and user stories such as Review and Rating, Admin Dashboard, Security and Authentication, UI/UX Design and Frontend Development, Backend Development and API Integration, Testing and Quality Assurance, and Deployment and Infrastructure in a similar detailed manner.)
-
+- **Communication**: Maintain open communication channels through Slack, Microsoft Teams, or other collaboration tools for discussions, updates, and meetings.
