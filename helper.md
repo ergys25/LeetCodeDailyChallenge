@@ -14,7 +14,6 @@
 
 ### Entity-Relationship Diagram (ERD)
 
-```plaintext
 [User]
 - id (PK)
 - email
@@ -286,3 +285,4 @@
 
 - Create Review Entity and ReviewRepository
 - Implement ReviewService with `addReview()` and `getReviews()` methods
+
